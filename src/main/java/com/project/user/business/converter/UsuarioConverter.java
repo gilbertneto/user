@@ -87,7 +87,7 @@ public class UsuarioConverter {
                 .build();
     }
 
-    public Usuario updateUsuario(UsuarioDTO usuarioDTO, Usuario entity){
+    public Usuario updateUsuario(UsuarioDTO usuarioDTO, Usuario entity) {
         return Usuario.builder()
                 .nome(usuarioDTO.getNome() != null ? usuarioDTO.getNome() : entity.getNome())
                 .id(entity.getId())

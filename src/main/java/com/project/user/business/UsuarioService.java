@@ -30,7 +30,7 @@ public class UsuarioService {
         );
     }
 
-    public void emailExiste(String email){
+    public void emailExiste(String email) {
         try {
             boolean existe = verificaEmailExistente(email);
             if (existe) {
@@ -42,16 +42,16 @@ public class UsuarioService {
         }
     }
 
-    public boolean verificaEmailExistente(String email){
+    public boolean verificaEmailExistente(String email) {
         return usuarioRepository.existsByEmail(email);
     }
 
-    public Usuario buscarUsuarioPorEmail(String email){
+    public Usuario buscarUsuarioPorEmail(String email) {
         return usuarioRepository.findByEmail(email).orElseThrow(
                 () -> new ResourceNotFoundException("Email não encontrado" + email));
     }
 
-    public void deletaUsuarioPorEmail(String email){
+    public void deletaUsuarioPorEmail(String email) {
         usuarioRepository.deleteByEmail(email);
     }
 
@@ -71,7 +71,6 @@ public class UsuarioService {
         // Salvos os dados do usuário convertido e depois pegou o retorno e converteu para UsuarioDTO
         return usuarioConverter.paraUsuarioDTO((usuarioRepository.save(usuario)));
     }
-
 
 
 }
