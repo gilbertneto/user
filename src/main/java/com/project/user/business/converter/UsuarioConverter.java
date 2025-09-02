@@ -102,7 +102,7 @@ public class UsuarioConverter {
 
     }
 
-    public Endereco updateEndereco(EnderecoDTO dto, Endereco entity){
+    public Endereco updateEndereco(EnderecoDTO dto, Endereco entity) {
         return Endereco.builder()
                 .id(entity.getId())
                 .rua(dto.getRua() != null ? dto.getRua() : entity.getRua())

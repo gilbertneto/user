@@ -58,10 +58,10 @@ public class UsuarioService {
             return usuarioConverter.paraUsuarioDTO(
                     usuarioRepository.findByEmail(email)
                             .orElseThrow(
-                    () -> new ResourceNotFoundException("Email não encontrado" + email))
+                                    () -> new ResourceNotFoundException("Email não encontrado" + email))
             );
         } catch (ResourceNotFoundException e) {
-            throw new ResourceNotFoundException("Email não encontrado " +email);
+            throw new ResourceNotFoundException("Email não encontrado " + email);
         }
     }
 
@@ -86,7 +86,7 @@ public class UsuarioService {
         return usuarioConverter.paraUsuarioDTO((usuarioRepository.save(usuario)));
     }
 
-    public EnderecoDTO atualizaEndereco(Long idEndereco, EnderecoDTO enderecoDTO){
+    public EnderecoDTO atualizaEndereco(Long idEndereco, EnderecoDTO enderecoDTO) {
         Endereco entity = enderecoRepository.findById(idEndereco).orElseThrow(() ->
                 new ResourceNotFoundException("ID não encontrado" + idEndereco));
 
