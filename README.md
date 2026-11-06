@@ -84,3 +84,9 @@ O repositório possui pipeline configurada em `.github/workflows`, executando bu
 - [ ] Adicionar exemplos de payload de autenticação
 - [ ] Adicionar Dockerfile e instruções de execução via container
 - [ ] Adicionar Testes Automatizados (JUnit) Mockito
+
+## Ecossistema Relacionado 
+
+https://github.com/gilbertneto/notification	
+https://github.com/gilbertneto/task-scheduler
+https://github.com/gilbertneto/bff-task-scheduler
