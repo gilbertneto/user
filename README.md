@@ -87,6 +87,6 @@ O repositório possui pipeline configurada em `.github/workflows`, executando bu
 
 ## Ecossistema Relacionado 
 
-https://github.com/gilbertneto/notification	
-https://github.com/gilbertneto/task-scheduler
-https://github.com/gilbertneto/bff-task-scheduler
+- https://github.com/gilbertneto/notification
+- https://github.com/gilbertneto/task-scheduler
+- https://github.com/gilbertneto/bff-task-scheduler
