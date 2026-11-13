@@ -1,8 +1,13 @@
+FROM gradle:9.1.1-jdk23 as build
+WORKDIR /app
+COPY . .
+RUN gradle build --no-daemon
+
 FROM openjdk:23-jdk
 
 WORKDIR /app
 
-COPY build/libs/user-0.0.1-SNAPSHOT.jar /app/user.jar
+COPY --from=build /app/build/libs/*.jar /app/user.jar
 
 EXPOSE 8080
 
